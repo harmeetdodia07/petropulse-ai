@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PetroPulse AI — Bloomberg-level oil market intelligence made simple. AI-powered insights, scenario simulation, and risk scoring for oil importers, logistics companies, fleet operators, and manufacturers." />
+  <meta name="keywords" content="oil price, crude oil intelligence, energy market, oil price forecast, supply chain risk, fuel cost simulator" />
+  <title>PetroPulse AI — Oil Decision Intelligence Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       LOADING SCREEN
+       ═══════════════════════════════════════ -->
+  <div id="app-loader" class="app-loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="loader-name">PetroPulse <span>AI</span></div>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+      <div class="loader-status">Initialising AI engines…</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SIDEBAR
+       ═══════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- Logo -->
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">PetroPulse</span>
+        <span class="logo-tag">AI Intelligence</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+
+      <div class="nav-section-label">OVERVIEW</div>
+
+      <a href="#" class="nav-item active" data-page="dashboard" id="nav-dashboard">
+        <i data-lucide="layout-dashboard" class="nav-icon"></i>
+        <span>Dashboard</span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="insights" id="nav-insights">
+        <i data-lucide="brain-circuit" class="nav-icon"></i>
+        <span>AI Insights</span>
+        <span class="nav-badge">AI</span>
+      </a>
+
+      <div class="nav-section-label">SIMULATION</div>
+
+      <a href="#" class="nav-item" data-page="simulator" id="nav-simulator">
+        <i data-lucide="activity" class="nav-icon"></i>
+        <span>Scenario Simulator</span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="risk" id="nav-risk">
+        <i data-lucide="shield-alert" class="nav-icon"></i>
+        <span>Risk Indicator</span>
+        <span class="nav-badge alert" id="nav-risk-badge">!</span>
+      </a>
+
+      <div class="nav-section-label">INTELLIGENCE</div>
+
+      <a href="#" class="nav-item" data-page="assistant" id="nav-assistant">
+        <i data-lucide="message-square" class="nav-icon"></i>
+        <span>AI Assistant</span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="demoScenarios" id="nav-demo">
+        <i data-lucide="zap" class="nav-icon"></i>
+        <span>Demo Scenarios</span>
+        <span class="nav-badge" id="nav-scenario-badge" style="display:none;background:#f59e0b;">●</span>
+      </a>
+
+    </nav>
+
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer">
+      <div class="system-status">
+        <div class="status-dot pulse"></div>
+        <span>AI Engine Live</span>
+      </div>
+      <div class="sidebar-version">v3.0.0 · Mock AI Edition</div>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════
+       MAIN WRAPPER
+       ═══════════════════════════════════════ -->
+  <div class="main-wrapper">
+
+    <!-- Top Navbar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+          <i data-lucide="menu" style="width:18px;height:18px;"></i>
+        </button>
+        <div class="page-breadcrumb">
+          <span class="breadcrumb-root">PetroPulse AI</span>
+          <i data-lucide="chevron-right" style="width:13px;height:13px;color:var(--text-muted);"></i>
+          <span class="breadcrumb-current" id="breadcrumb-label">Dashboard</span>
+        </div>
+      </div>
+
+      <!-- Market Ticker -->
+      <div class="topbar-ticker" id="market-ticker"></div>
+
+      <div class="topbar-right">
+        <div class="date-filter">
+          <i data-lucide="calendar" style="width:13px;height:13px;"></i>
+          <span id="current-date">Apr 09, 2026</span>
+        </div>
+
+        <!-- Notifications -->
+        <div style="position:relative;">
+          <button class="icon-btn" id="notifications-btn" aria-label="Notifications">
+            <i data-lucide="bell" style="width:16px;height:16px;"></i>
+            <span class="icon-btn-badge">3</span>
+          </button>
+          <div class="notif-panel" id="notif-panel">
+            <div class="notif-header">Alerts</div>
+            <div class="notif-item notif-critical">
+              <span class="notif-dot" style="background:#ef4444;"></span>
+              <div>
+                <div class="notif-title">Brent up 1.2% — check insights</div>
+                <div class="notif-time">2 min ago</div>
+              </div>
+            </div>
+            <div class="notif-item">
+              <span class="notif-dot" style="background:#f59e0b;"></span>
+              <div>
+                <div class="notif-title">Supplier risk elevated — Iraq</div>
+                <div class="notif-time">18 min ago</div>
+              </div>
+            </div>
+            <div class="notif-item">
+              <span class="notif-dot" style="background:#2d5be3;"></span>
+              <div>
+                <div class="notif-title">New AI forecast: 30-day bullish</div>
+                <div class="notif-time">1 hr ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-chip" id="profile-chip">
+          <div class="profile-avatar">PP</div>
+          <div class="profile-info">
+            <span class="profile-name">Demo User</span>
+            <span class="profile-role">Market Analyst</span>
+          </div>
+          <i data-lucide="chevron-down" style="width:12px;height:12px;color:var(--text-muted);"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="content-area" id="content-area">
+      <!-- Pages injected by app.js -->
+    </main>
+
+  </div>
+
+  <!-- Main App (ES Module) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
