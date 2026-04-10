@@ -1,0 +1,1 @@
+{"features": ["distance_km", "fuel_consumed_litres", "actual_fuel_cost_rs", "cost_per_km", "mileage_actual", "tank_capacity_litres", "hard_braking_events", "idling_minutes", "speeding_events", "diesel_rsp", "vat_pct", "load_num", "risk_score"]}
