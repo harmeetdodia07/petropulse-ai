@@ -1,0 +1,26 @@
+{
+  "Pune-Mumbai": {
+    "distance_km": 150.0,
+    "cost_inr": 2449.0,
+    "risk": 15,
+    "state": "GJ"
+  },
+  "Ahmedabad-Mumbai": {
+    "distance_km": 530.0,
+    "cost_inr": 11016.0,
+    "risk": 40,
+    "state": "KA"
+  },
+  "Chennai-Bangalore": {
+    "distance_km": 350.0,
+    "cost_inr": 6077.0,
+    "risk": 30,
+    "state": "DL"
+  },
+  "Jaipur-Delhi": {
+    "distance_km": 280.0,
+    "cost_inr": 4194.0,
+    "risk": 20,
+    "state": "RJ"
+  }
+}

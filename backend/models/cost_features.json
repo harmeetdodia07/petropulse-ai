@@ -1,0 +1,46 @@
+{
+  "features": [
+    "distance_km",
+    "fuel_consumed_litres",
+    "actual_fuel_cost_rs",
+    "cost_per_km",
+    "fuel_efficiency",
+    "tank_capacity_litres",
+    "hard_braking_events",
+    "idling_minutes",
+    "speeding_events",
+    "diesel_rsp",
+    "vat_pct",
+    "load_factor",
+    "driver_risk_score",
+    "service_age_days",
+    "truck_health_score",
+    "route_avg_cost",
+    "route_avg_efficiency",
+    "route_frequency",
+    "day_of_week",
+    "month",
+    "weekend_flag",
+    "seasonal_indicator"
+  ],
+  "best_model": "random_forest",
+  "metrics": {
+    "ridge": {
+      "mae": 407.78,
+      "rmse": 527.47,
+      "r2": 0.9524
+    },
+    "random_forest": {
+      "mae": 106.81,
+      "rmse": 160.78,
+      "r2": 0.9956
+    },
+    "xgboost": {
+      "mae": 116.42,
+      "rmse": 172.04,
+      "r2": 0.9949
+    }
+  },
+  "n_samples": 500,
+  "n_features": 22
+}
