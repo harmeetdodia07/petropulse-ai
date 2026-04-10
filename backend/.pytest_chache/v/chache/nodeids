@@ -1,0 +1,12 @@
+[
+  "tests/test_endpoints.py::test_dashboard",
+  "tests/test_endpoints.py::test_forecast",
+  "tests/test_endpoints.py::test_health",
+  "tests/test_endpoints.py::test_news_risk",
+  "tests/test_endpoints.py::test_predict_cargo_ship",
+  "tests/test_endpoints.py::test_predict_pipeline",
+  "tests/test_endpoints.py::test_predict_truck",
+  "tests/test_endpoints.py::test_recommend",
+  "tests/test_endpoints.py::test_routes_optimize",
+  "tests/test_endpoints.py::test_simulate"
+]
