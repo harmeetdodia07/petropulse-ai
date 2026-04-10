@@ -1,0 +1,38 @@
+State_UT	Diesel_RSP_Litre	VAT_Rate_approx	Category	Refuel_Strategy			
+Andhra Pradesh	109.68	22.25%	Critical High	Avoid - Refuel in Odisha/TN			1
+Arunachal Pradesh	92.66	7.00%	Lowest	Primary Refuel Hub			2
+Assam	94.25	18.00%	Low	Primary Refuel Hub			3
+Bihar	106.94	16.37%	High	Avoid - Refuel in UP/Jharkhand			4
+Chhattisgarh	101.4	24.00%	Medium-High	Neutral			5
+Goa	91.35	16.00%	Lowest	Primary Refuel Hub			6
+Gujarat	94.68	14.90%	Low	Primary Refuel Hub			9
+Haryana	92.5	16.40%	Low	Primary Refuel Hub			7
+Himachal Pradesh	92.1	13.00%	Low	Primary Refuel Hub			8
+Jharkhand	98.15	22.00%	Medium	Neutral			10
+Karnataka	103.33	21.17%	Medium-High	Avoid - Refuel in MH/Goa			11
+Kerala	106.46	22.76%	High	Avoid - Refuel in TN/KN			12
+Madhya Pradesh	107.31	19.00%	High	Avoid - Refuel in UP/GJ			13
+Maharashtra	104.71	21.00%	Medium-High	Avoid - Refuel in GJ/Goa			16
+Manipur	95.2	15.50%	Low	Neutral			14
+Meghalaya	92.8	13.50%	Lowest	Primary Refuel Hub			15
+Mizoram	91.95	12.00%	Lowest	Primary Refuel Hub			17
+Nagaland	93.4	14.00%	Low	Neutral			18
+Odisha	102.3	22.00%	Medium	Neutral			19
+Punjab	92.25	15.10%	Low	Primary Refuel Hub			0
+Rajasthan	104.75	17.30%	Medium-High	Avoid - Refuel in GJ/UP/HR			23
+Sikkim	96.5	14.00%	Low	Neutral			20
+Tamil Nadu	101.5	15.00%	Medium	Neutral			25
+Telangana	108.83	27.00%	Critical High	Avoid - Refuel in AP/KN			21
+Tripura	94.1	16.00%	Low	Neutral			22
+Uttar Pradesh	94.46	17.48%	Low	Primary Refuel Hub			26
+Uttarakhand	92.6	17.00%	Low	Primary Refuel Hub			24
+West Bengal	106.22	17.00%	High	Avoid - Refuel in JH/Odisha			30
+Andaman & Nicobar	84.1	1.00%	Absolute Lowest	Primary Refuel Hub			25
+Chandigarh	90.4	14.50%	Lowest	Primary Refuel Hub			27
+Dadra & Nagar Haveli	92.3	13.00%	Lowest	Primary Refuel Hub			28
+Daman & Diu	92.3	13.00%	Lowest	Primary Refuel Hub			29
+Delhi	94.77	16.75%	Low	Primary Refuel Hub			35
+Jammu & Kashmir	93.2	16.00%	Low	Neutral			31
+Ladakh	91.5	11.00%	Lowest	Primary Refuel Hub			32
+Lakshadweep	85.2	0.00%	Absolute Lowest	Primary Refuel Hub			33
+Puducherry	90.1	14.00%	Lowest	Primary Refuel Hub			34
